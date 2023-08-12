@@ -356,7 +356,7 @@ section {
 	border-radius: 10px;
 }
 .car__card_1 {
-	background: url('./static/img/bityi.png') no-repeat;
+	background: url('../static/img/bityi.png') no-repeat;
 }
 .car__card_2 {
 	background: url('./static/img/zapret.png') no-repeat;
