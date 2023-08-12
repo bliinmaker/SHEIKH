@@ -47,7 +47,7 @@ section {
 	gap: 16px;
 }
 .bg-wrapper {
-	background: url('./static/img/bg.png');
+	background: url('../static/img/bg.png');
 	width: 100%;
 	background-size: cover;
 }
@@ -359,25 +359,25 @@ section {
 	background: url('../static/img/bityi.png') no-repeat;
 }
 .car__card_2 {
-	background: url('./static/img/zapret.png') no-repeat;
+	background: url('../static/img/zapret.png') no-repeat;
 }
 .car__card_3 {
-	background: url('./static/img/probeg.png') no-repeat;
+	background: url('../static/img/probeg.png') no-repeat;
 }
 .car__card_4 {
-	background: url('./static/img/problem.png') no-repeat;
+	background: url('../static/img/problem.png') no-repeat;
 }
 .car__card_5 {
-	background: url('./static/img/credit.png') no-repeat;
+	background: url('../static/img/credit.png') no-repeat;
 }
 .car__card_6 {
-	background: url('./static/img/arest.png') no-repeat;
+	background: url('../static/img/arest.png') no-repeat;
 }
 .car__card_7 {
-	background: url('./static/img/util.png') no-repeat;
+	background: url('../static/img/util.png') no-repeat;
 }
 .car__card_8 {
-	background: url('./static/img/doc.png') no-repeat;
+	background: url('../static/img/doc.png') no-repeat;
 }
 /* advantage */
 .our-advantage {
@@ -513,7 +513,7 @@ section {
 }
 /* mark-car */
 .mark-car {
-	background: url('./static/img/bg_mark.png') no-repeat;
+	background: url('../static/img/bg_mark.png') no-repeat;
 	margin-top: 120px;
 }
 .mark-car__flex {
@@ -763,7 +763,7 @@ section {
 /* rulemaster */
 .rulemaster {
 	padding-top: 0 !important;
-	background: url('./static/img/bg_rulemaster.png') no-repeat;
+	background: url('../static/img/bg_rulemaster.png') no-repeat;
 }
 .rulemaster-wrap {
 	display: flex;
@@ -862,7 +862,7 @@ section {
 }
 /* evaluation */
 .evaluation {
-	background: url('./static/img/bg-evaluation.png');
+	background: url('../static/img/bg-evaluation.png');
 }
 .evaluation-wrap {
 	display: flex;
