@@ -27,6 +27,7 @@ p {
 a {
 	text-decoration: none;
 	color: #3a3a3a;
+	box-sizing: border-box;
 }
 section {
 	padding-top: 105px;
@@ -72,7 +73,23 @@ section {
 	background-color: #d80000;
 	padding: 12px 20px;
 	border-radius: 10px;
-	color: #fff;
+	-webkit-text-fill-color: #fff;
+}
+.menu-up__calc {
+	display: flex;
+	gap: 10px;
+	background-color: #d80000;
+	padding: 12px 20px;
+	border-radius: 10px;
+	-webkit-text-fill-color: #fff;
+}
+.menu-up__calc:hover {
+	background: #ec1414;
+	transition: all linear 0.7s;
+}
+.menu-up__mark:hover {
+	background: #ec1414;
+	transition: all linear 0.7s;
 }
 .menu-up__mark p {
 	color: #fff;
@@ -84,6 +101,14 @@ section {
 .menu-up__phone span {
 	color: #868686;
 	/* position: relative; */
+}
+.menu-up__phone a {
+	margin-top: 6px;
+	color: #3a3a3a;
+	margin: 0;
+	padding: 0;
+	font-size: 18.72px;
+	font-weight: 600;
 }
 .menu-up__phone span:before {
 	content: '';
@@ -110,8 +135,20 @@ section {
 	border-radius: 10px;
 	border: 1px solid #3a3a3a;
 }
+.menu-up__question:hover {
+	background: #ec1414;
+	border: 1px solid #ec1414;
+	-webkit-text-fill-color: #fff;
+	transition: all linear 0.7s;
+}
+.menu-up__question:focus {
+	background: #c21111;
+	border: 1px solid #c21111;
+	-webkit-text-fill-color: #fff;
+	transition: all linear 0.7s;
+}
 /* timer */
-.timer__items{
+.timer__items {
 	justify-content: space-between;
 }
 .sale h3 {
@@ -252,9 +289,15 @@ section {
 	font-weight: 700;
 	line-height: normal;
 	text-transform: uppercase;
-	color: #fff;
+	-webkit-text-fill-color: #fff;
 	margin-bottom: 16px;
 	margin-top: 20px;
+}
+.action__btn:hover {
+	background: #ec1414;
+}
+.action__btn:focus {
+	background: #c21111;
 }
 .action__form-wrap {
 	display: grid;
@@ -355,6 +398,13 @@ section {
 	background-color: #fff;
 	border-radius: 10px;
 }
+/* .car__card:hover img{
+	background: var(--d-80000, #D80000);
+} */
+.car__card .car__img path {
+	fill: #fff;
+}
+
 .car__card_1 {
 	background: url('../static/img/bityi.png') no-repeat;
 }
@@ -507,9 +557,18 @@ section {
 	border: 2px solid #d80000;
 	padding: 24px 30px;
 	margin: 0 auto;
+	background-color: #fff;
+	-webkit-text-fill-color: #d80000;
 }
-.last_car__btn a {
-	color: #d80000;
+.last_car__btn:hover {
+	background: #ec1414;
+	border: 2px solid #ec1414;
+	-webkit-text-fill-color: #fff;
+}
+.last_car__btn:focus {
+	background: #c21111;
+	border: 2px solid #c21111;
+	-webkit-text-fill-color: #fff;
 }
 /* mark-car */
 .mark-car {
@@ -561,6 +620,7 @@ section {
 	width: 502px;
 }
 .mark-car__btn {
+	border:none;
 	display: flex;
 	gap: 6px;
 	border-radius: 10px;
@@ -573,12 +633,18 @@ section {
 	width: 334px;
 	height: 72px;
 }
-.mark-car__btn a {
+.mark-car__btn p {
 	color: #fff;
 	text-align: center;
 	font-size: 18px;
 	font-weight: 700;
 	text-transform: uppercase;
+}
+.mark-car__btn:hover {
+	background: #34DC77;
+}
+.mark-car__btn:focus {
+	background: #0CB44F;
 }
 .mark-car__img img {
 	height: 624px;
@@ -605,16 +671,16 @@ section {
 	gap: 28px;
 	margin-top: 300px;
 }
-.schema-car__item_0{
+.schema-car__item_0 {
 	margin-top: -230px;
 }
-.schema-car__item_1{
+.schema-car__item_1 {
 	margin-top: -170px;
 }
-.schema-car__item_2{
+.schema-car__item_2 {
 	margin-top: -110px;
 }
-.schema-car__item_3{
+.schema-car__item_3 {
 	margin-top: -50px;
 }
 .schema-car__item {
@@ -656,13 +722,13 @@ section {
 	padding-right: 40px;
 	text-align: left;
 }
-.schema-car__item__img_1 img{
+.schema-car__item__img_1 img {
 	margin-top: -22px;
 }
-.schema-car__item__img_2 img{
+.schema-car__item__img_2 img {
 	margin-top: 10px;
 }
-.schema-car__item__img_3 img{
+.schema-car__item__img_3 img {
 	margin-top: -7px;
 }
 .schema-car__btn {
@@ -1020,5 +1086,4 @@ table {
 	color: #fff;
 	font-size: 16px;
 	font-weight: 400;
-	line-height: normal;
 }

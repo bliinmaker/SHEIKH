@@ -16,21 +16,21 @@
         <div class="menu-up__logo">
           <img src="./static/img/logo-main.svg" alt="">
         </div>
-        <div class="menu-up__mark">
+        <a class="menu-up__mark">
           <p>ОЦЕНКА</p>
           <img src="./static/img/rubel.svg" alt="">
-        </div>
-        <div class="menu-up__mark">
+        </a>
+        <a class="menu-up__calc">
           <p>КАЛЬКУЛЯТОР</p>
           <img src="./static/img/calculator.svg" alt="">
-        </div>
+        </a>
         <div class="menu-up__phone">
           <span>Работаем круглосуточно</span>
-          <h3 href="tel:444">+7 (904) 111-22-33</h3>
+          <a href="tel:7 (904) 111-22-33">+7 (904) 111-22-33</a>
         </div>
-        <div class="menu-up__question">
-          <a>Вам перезвонить?</a>
-        </div>
+        <a href="#" class="menu-up__question">
+          <p>Вам перезвонить?</p>
+        </a>
       </div>
       <div class="menu-down">
         <a class="menu-down__item" href="">ВЫКУП АВТО</a>
@@ -162,7 +162,7 @@
             Битые
           </h3>
           <div class="car__img">
-            <img src="static/img/arro.svg" alt="">
+            <img class="car__img__svg" src="static/img/arro.svg" alt="">
           </div>
         </div>
         <div class="car__card car__card_2">
@@ -340,9 +340,9 @@
         </div>
       </div>
     </div>
-    <div class="last_car__btn">
-      <a href="">Все выкупленные авто</a>
-    </div>
+    <button class="last_car__btn">
+      <p href="">Все выкупленные авто</p>
+    </button>
   </section>
   <section class="mark-car">
     <div class="container mark-car__flex">
@@ -369,12 +369,12 @@
         <p class="mark-car__text">
           Отправьте фото или видео автомобиля, сообщите год выпуска, пробег, опишите состояние
         </p>
-        <div class="mark-car__btn">
-          <a href="#">Отправить в whatsapp</a>
+        <button class="mark-car__btn">
+          <p>Отправить в whatsapp</p>
           <div class="mark-car__btn__img">
             <img src="./static/img/whatsapp.png" alt="">
           </div>
-        </div>
+        </button>
       </div>
       <div class="mark-car__img">
         <img src="./static/img/iphone.png" alt="">
@@ -748,7 +748,7 @@
           </div>
           <div class="action__item">
             <img src="./static/img/phone.svg" alt="">
-            <p>+7 (___) ___-____</p>
+            <input type="number" placeholder="+7 (___) ___-____"></input>
           </div>
           <form class="action__form" action="">
             <p>Куда отправить цену?</p>
@@ -774,7 +774,7 @@
                 </div>
               </div>
             </label>
-            <button class="action__btn btn" type="submit">Узнать стоимость</button>
+            <button class="action__btn btn" type="submit"> Узнать стоимость</button>
             <label class="action__form__extra" for="">
               <input type="checkbox" value="value-5">
               <span>Отправляя свои данные через эту форму, я соглашаюсь с политикой обработки персональных данных</span>
