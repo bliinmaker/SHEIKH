@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SHEIKN</title>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <!-- Link CSS -->
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -40,7 +43,7 @@
         <a class="menu-down__item" href="">О КОМПАНИИ</a>
       </div>
     </nav>
-    <header class="header container">
+    <header id="#header" class="header container">
       <div class="header-wrapper">
         <div class="offer">
           <h1 class="offer__title">
@@ -72,7 +75,7 @@
           <h3>Оцените авто за 1 минуту</h3>
           <div class="action__item">
             <img src="./static/img/car.svg" alt="">
-            <p>Марка - модель - год</p>
+            <input type="text" placeholder="Марка - модель - год"></input>
           </div>
           <div class="action__item">
             <img src="./static/img/phone.svg" alt="">
@@ -153,7 +156,7 @@
       </div>
     </header>
   </div>
-  <section class="car container">
+  <section id="car" class="car container">
     <h1 class="car__title">КАКИЕ АВТО ВЫКУПАЕМ</h1>
     <div class="car__cards">
       <div class="car__cards-wrap">
@@ -217,7 +220,7 @@
         </div>
         <div class="car__card car__card_8">
           <h3 class="car__text car__text_extra">
-            Без <br> документов
+            Без документов
           </h3>
           <div class="car__img">
             <img src="static/img/arro.svg" alt="">
@@ -226,14 +229,14 @@
       </div>
     </div>
   </section>
-  <section class="our-advantage">
+  <section id="our-advantage" class="our-advantage">
     <div class="container">
       <div class="our-advantage-wrap">
         <div class="our-advantage__left">
           <h1 class="our-advantage__title">НАШИ <br> ПРЕИМУЩЕСТВА</h1>
-          <div class="our-advantage__img">
-            <img src="./static/img/bg-advantage.png" alt="">
-          </div>
+          <!-- <div class="our-advantage__img"> -->
+          <img class="our-advantage__img" src="./static/img/bg-advantage.png" alt="">
+          <!-- </div> -->
         </div>
         <div class="our-advantage__items">
           <div class="our-advantage__item">
@@ -268,11 +271,21 @@
               <p>Расчет наличными, на банковскую карту, или перевод на счет в банке в момент подписания договора.</p>
             </div>
           </div>
+          <div class="our-advantage__item our-advantage__item_extra">
+            <div class="our-advantage__item__up">
+              <p>04</p>
+              <img src="./static/img/uchet_icon.png" alt="">
+            </div>
+            <div class="our-advantage__item__down">
+              <h3>Снимем с учета</h3>
+              <p>Снятие с учета с предоставлением пакета документов на электронную почту.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="last-car container">
+  <section id="last-car" class="last-car container">
     <h1 class="last-car__title">ПОСЛЕДНИЕ ВЫКУПЛЕННЫЕ АВТО</h1>
     <div class="last-car__items">
       <div class="last-car__item">
@@ -288,6 +301,9 @@
           <div class="last-car__cost">
             <p>Стоимость:</p>
             <span>729 000 ₽</span>
+          </div>
+          <div class="last-car__item__btn">
+            <button>подробнее</button>
           </div>
         </div>
       </div>
@@ -305,6 +321,9 @@
             <p>Стоимость:</p>
             <span>1 469 000 ₽</span>
           </div>
+          <div class="last-car__item__btn">
+            <button>подробнее</button>
+          </div>
         </div>
       </div>
       <div class="last-car__item">
@@ -320,6 +339,9 @@
           <div class="last-car__cost">
             <p>Стоимость:</p>
             <span>880 000 ₽</span>
+          </div>
+          <div class="last-car__item__btn">
+            <button>подробнее</button>
           </div>
         </div>
       </div>
@@ -337,6 +359,9 @@
             <p>Стоимость:</p>
             <span>7 499 000 ₽</span>
           </div>
+          <div class="last-car__item__btn">
+            <button>подробнее</button>
+          </div>
         </div>
       </div>
     </div>
@@ -344,7 +369,7 @@
       <p href="">Все выкупленные авто</p>
     </button>
   </section>
-  <section class="mark-car">
+  <section id="mark-car" class="mark-car">
     <div class="container mark-car__flex">
       <div class="mark-car-wrap">
         <h1 class="mark-car__title">
@@ -381,7 +406,7 @@
       </div>
     </div>
   </section>
-  <section class="schema-car container">
+  <section id="schema-car" class="schema-car container">
     <h1 class="schema-car__title">Схема выкупа авто</h1>
     <div class="schema-car__img">
       <img src="./static/img/schema-car.png" alt="">
@@ -427,14 +452,50 @@
       </div>
     </div>
   </section>
-  <section class="review">
+  <section id="review" class="review">
     <div class="container">
       <h1 class="review__title">отзывы довольных клиентов</h1>
       <div class="review-wrap">
         <div class="review__left">
-          <div class="review__video">
-            <img src="./static/img/review_video.png" alt="">
-          </div>
+          <swiper-container class="review__video__swiper-container" effect="cards" grab-cursor="true">
+            <swiper-slide class="review__video__swiper-slide">
+              <div class="review__video-wrap">
+                <video class="review__video" id="review__video">
+                  <source src="./static/video/review_1.mp4">
+                </video>
+                <div class="review__controls">
+                  <button class="review__play" id="review__play"><img src="./static/img/play.svg" alt=""></button>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide class="review__video__swiper-slide">
+              <div class="review__video-wrap">
+                <video class="review__video" id="review__video">
+                  <source src="./static/video/review_1.mp4">
+                </video>
+                <div class="review__controls">
+                  <button class="review__play" id="review__play"><img src="./static/img/play.svg" alt=""></button>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide class="review__video__swiper-slide">
+              <div class="review__video-wrap">
+                <video class="review__video" id="review__video">
+                  <source src="./static/video/review_1.mp4">
+                </video>
+                <div class="review__controls">
+                  <button class="review__play" id="review__play"><img src="./static/img/play.svg" alt=""></button>
+                </div>
+              </div>
+            </swiper-slide>
+            <!-- <swiper-slide>Slide 4</swiper-slide>
+            <swiper-slide>Slide 5</swiper-slide>
+            <swiper-slide>Slide 6</swiper-slide>
+            <swiper-slide>Slide 7</swiper-slide>
+            <swiper-slide>Slide 8</swiper-slide>
+            <swiper-slide>Slide 9</swiper-slide> -->
+          </swiper-container>
+          
           <h3 class="review__text">Видеотзывы</h3>
           <div class="review__youtube">
             <div class="review__icon">
@@ -449,9 +510,20 @@
           </div>
         </div>
         <div class="review__right">
-          <div class="review__right__img">
+          <!-- <div class="review__right__img">
             <img src="./static/img/review_1.png" alt="">
-          </div>
+          </div> -->
+          <swiper-container class="review__swiper-container" effect="cards" grab-cursor="true">
+            <swiper-slide class="review__swiper-slide"><img src="./static/img/review_1.png" alt=""></swiper-slide>
+            <swiper-slide class="review__swiper-slide"><img src="./static/img/review_1.png" alt=""></swiper-slide>
+            <swiper-slide class="review__swiper-slide"><img src="./static/img/review_1.png" alt=""></swiper-slide>
+            <!-- <swiper-slide>Slide 4</swiper-slide>
+            <swiper-slide>Slide 5</swiper-slide>
+            <swiper-slide>Slide 6</swiper-slide>
+            <swiper-slide>Slide 7</swiper-slide>
+            <swiper-slide>Slide 8</swiper-slide>
+            <swiper-slide>Slide 9</swiper-slide> -->
+          </swiper-container>
           <h3 class="review__text">Отзывы из платформ</h3>
           <div class="review__info">
             <div class="review__vk">
@@ -481,7 +553,7 @@
       </div>
     </div>
   </section>
-  <section class="documents container">
+  <section id="documents" class="documents container">
     <h1 class="documents__title">Необходимые документы для выкупа авто</h1>
     <div class="documents__items">
       <div class="documents__item">
@@ -516,7 +588,7 @@
       </div>
     </div>
   </section>
-  <section class="rulemaster">
+  <section id="rulemaster" class="rulemaster">
     <div class="container">
       <div class="rulemaster-wrap">
         <div class="rulemaster__left">
@@ -553,7 +625,7 @@
         </div>
       </div>
   </section>
-  <section class="all-mark container">
+  <section id="all-mark" class="all-mark container">
     <h1 class="all-mark__title">Выкуп авто любых марок</h1>
     <div class="all-mark__items">
       <div class="all-mark__wrap">
@@ -734,7 +806,7 @@
       </div>
     </div>
   </section>
-  <section class="evaluation">
+  <section id="evaluation" class="evaluation">
     <div class="container">
       <div class="evaluation-wrap">
         <div class="evaluation__left">
@@ -744,7 +816,7 @@
         <div class="action">
           <div class="action__item">
             <img src="./static/img/car.svg" alt="">
-            <p>Марка - модель - год</p>
+            <input type="text" placeholder="Марка - модель - год"></input>
           </div>
           <div class="action__item">
             <img src="./static/img/phone.svg" alt="">
@@ -784,7 +856,7 @@
       </div>
     </div>
   </section>
-  <section class="seo container">
+  <section id="seo" class="seo container">
     <h2 class="seo__title">Текст для SEO</h2>
     <p class="seo__text">
       Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев
@@ -798,7 +870,7 @@
       </div>
     </a>
   </section>
-  <section class="table-car container">
+  <section id="table-car" class="table-car container">
     <h2 class="table-car__title">Где выгоднее продавать автомобиль?</h2>
     <table class="table-car__table">
       <tr class="table-car__row table-car__row_up">
@@ -887,41 +959,36 @@
       </tr>
     </table>
   </section>
-  <footer class="footer">
+  <footer id="footer" class="footer">
     <div class="container">
       <div class="footer-wrap">
         <div class="footer__major">
-          <div class="footer__logo">
+          <a href="/" class="footer__logo">
             <img src="./static/img/logo-footer.svg" alt="">
-          </div>
+          </a>
           <div class="footer__link">
             <a href="">Политика конфиденциальности</a>
           </div>
         </div>
         <div class="footer__menu">
-          <a href="" class="footer__menu__item">ВЫКУП АВТО</a>
-          <a href="" class="footer__menu__item">ПОДБОР АВТО</a>
-          <a href="" class="footer__menu__item">ВЫКУПЛЕННЫЕ АВТО</a>
-          <a href="" class="footer__menu__item">КОНТАКТЫ</a>
-          <a href="" class="footer__menu__item">О КОМПАНИИ</a>
+          <div class="footer__menu__item"><a href="" class="footer__menu__item">ВЫКУП АВТО</a></div>
+          <div class="footer__menu__item"><a href="" class="footer__menu__item">ПОДБОР АВТО</a></div>
+          <div class="footer__menu__item"><a href="" class="footer__menu__item">ВЫКУПЛЕННЫЕ АВТО</a></div>
+          <div class="footer__menu__item"><a href="" class="footer__menu__item">КОНТАКТЫ</a></div>
+          <div class="footer__menu__item"><a href="" class="footer__menu__item">О КОМПАНИИ</a></div>
         </div>
         <div class="footer__media">
           <div class="footer__img">
-            <img src="./static/img/vk.png" alt="">
+            <img src="./static/img/vk.svg" alt="">
           </div>
           <div class="footer__img">
-            <img src="./static/img/whatsapp_2.png" alt="">
+            <img src="./static/img/whatsapp.svg" alt="">
           </div>
         </div>
         <div class="footer__phone">
           <span>Работаем круглосуточно</span>
-          <h3>+7 (904) 111-22-33</h3>
+          <a href="tel:7 (904) 111-22-33">+7 (904) 111-22-33</a>
         </div>
-        <!-- <div class="footer__question">
-          <div class="footer__question__link">
-            <a>Вам перезвонить?</a>
-          </div>
-        </div> -->
         <div class="footer__question">
           <a>Вам перезвонить?</a>
         </div>
@@ -929,6 +996,8 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

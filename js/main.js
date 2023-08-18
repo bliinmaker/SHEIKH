@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		new Date().getMonth() + 1,
 		01
 	)
-    console.log(deadline - new Date())
+	console.log(deadline - new Date())
 	// id таймера
 	let timerId = null
 	// склонение числительных
@@ -54,3 +54,23 @@ document.addEventListener('DOMContentLoaded', function () {
 	// вызываем функцию countdownTimer каждую секунду
 	timerId = setInterval(countdownTimer, 1000)
 })
+
+// video
+const video = document.getElementById('review__video')
+const play_pause = document.getElementById('review__play')
+
+play_pause.addEventListener('click', PlayPauseVideo)
+video.addEventListener('click', PlayPauseVideo)
+function PlayPauseVideo(){
+	if(video.paused){
+		// play_pause.innerHTML='⏸'
+		play_pause.innerHTML=''
+		video.play()
+	} else{
+		// play_pause.innerHTML='►'
+		play_pause.innerHTML='<img src="./static/img/play.svg" alt="">'
+		video.pause()
+	}
+}
+
+// slider
